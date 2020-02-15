@@ -8,6 +8,14 @@
     </div>
 
     <div>
+      {% for post in posts %}
+        <div>
+          <p>published: {{ post.published_date }}</p>
+          <h2><a href="">{{ post.title }}</a></h2>
+          <p>{{ post.text|linebreaksbr }}</p>
+        </div>
+        {{ post }}
+      {% endfor %}
       <h2><a href="">Hi there!</a></h2>
       <p>It works!</p>
     </div>
